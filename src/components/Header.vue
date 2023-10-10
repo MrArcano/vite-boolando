@@ -60,34 +60,35 @@ export default {
 
     background-color: #ff6900;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    .nav-bar{
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      ul{
+        list-style: none;
+      }
+
+      a{
+        color: white;
+        text-decoration: none;
+        margin-right: 8px;
+      }
+      .text-menu a{
+        font-weight: bold;
+        font-size: 18px;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      .logo{
+        width: 150px;
+      }
+    }
   }
 
-  .nav-bar{
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
 
-  .nav-bar ul{
-    list-style: none;
-  }
 
-  .nav-bar a{
-    color: white;
-    text-decoration: none;
-    margin-right: 8px;
-  }
-
-  .nav-bar .text-menu a{
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .nav-bar .text-menu a:hover{
-    text-decoration: underline;
-  }
-
-  .nav-bar .logo{
-    width: 150px;
-  }
 </style>
