@@ -26,8 +26,8 @@ export default {
     <div class="container">
       <div class="cards flex-box">
 
-        
-        <div v-for="(card , index) in cardsData" :key="index" class="card"> <!-- inizio card -->
+        <!-- inizio card -->
+        <div v-for="(card , index) in cardsData" :key="index" class="card"> 
           <div class="card-top">
             <div class="card-image">
               <img :src="getUrl(index,'')" :alt="'img' + card.src">
@@ -46,8 +46,9 @@ export default {
             <span class="new-price">{{ card.newPrice }}&euro;</span>
             <span v-if="card.oldPrice" class="old-price">{{ card.oldPrice }}&euro;</span>
           </div>
-        </div> <!-- fine card -->
-
+        </div> 
+        <!-- fine card -->
+        
       </div>
     </div>
   </main>

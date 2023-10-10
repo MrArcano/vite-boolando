@@ -1,23 +1,30 @@
 <script>
+import { menuHeader } from '../data/menuHeader';
+
 /* import the fontawesome core */
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 /* import font awesome icon component */
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faUser } from '@fortawesome/free-regular-svg-icons'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 
 /* add icons to the library */
-library.add(faUser, faHeart, faBagShopping)
+library.add(faUser, faHeart, faBagShopping);
 
 export default {
   name: "Header",
   components:{
     FontAwesomeIcon
-  }
+  },
+  data() {
+    return {
+      menuHeader
+    }
+  },
 }
 </script>
 
@@ -27,9 +34,9 @@ export default {
     <div class="nav-bar container flex-box">
       <div class="text-menu fix-width">
         <ul class="flex-box">
-          <li><a href="#">Donna</a></li>
-          <li><a href="#">Uomo</a></li>
-          <li><a href="#">Bambini</a></li>
+          <li v-for="(item,index) in menuHeader" :key="index">
+            <a :href="item.href">{{ item.text }}</a>
+          </li>
         </ul>
       </div>
 

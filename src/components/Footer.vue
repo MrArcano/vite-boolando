@@ -1,4 +1,6 @@
 <script>
+import { menuFooter } from '../data/menuFooter'
+
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -19,7 +21,12 @@ export default {
   name: "Footer",
   components:{
     FontAwesomeIcon
-  }
+  },
+  data() {
+    return {
+      menuFooter
+    }
+  },
 }
 </script>
 
@@ -30,9 +37,9 @@ export default {
     <div class="col-left">
       <h3>Boolando s.r.l.</h3>
       <ul class="flex-box">
-        <li><a href="#">Informazioni legali</a></li>
-        <li><a href="#">Informatica sulla privacy</a></li>
-        <li><a href="#">Diritto di recesso</a></li>
+        <li v-for="(item,index) in menuFooter" :key="index">
+            <a :href="item.href">{{ item.text }}</a>
+          </li>
       </ul>
     </div>
     <div class="col-right">
