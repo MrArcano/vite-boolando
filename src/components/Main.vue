@@ -1,0 +1,15 @@
+<script>
+export default {
+  name: "Main"
+}
+</script>
+
+<template>
+  <main>
+    MAIN
+  </main>
+</template>
+
+<style>
+
+</style>
