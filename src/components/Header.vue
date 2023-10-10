@@ -6,10 +6,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret)
+library.add(faUser, faHeart, faBagShopping)
 
 export default {
   name: "Header",
@@ -38,17 +40,16 @@ export default {
       <div class="icon-menu fix-width text-right">
         
         <a href="#"><font-awesome-icon icon="fa-regular fa-user" /></a>
-        <a href="#" class="fa-regular fa-heart"></a>
-        <a href="#" class="fa-solid fa-bag-shopping"></a>
+        <a href="#"><font-awesome-icon icon="fa-regular fa-heart" /></a>
+        <a href="#"><font-awesome-icon icon="fa-solid fa-bag-shopping" /></a>
+        
       </div>
     </div>
   </header>
   
 </template>
 
-<style lang="scss">
-  @use "../scss/main.scss";
-
+<style lang="scss" scoped>
   header{
     position: fixed;
     top: 0;
