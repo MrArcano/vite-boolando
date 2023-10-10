@@ -1,0 +1,11 @@
+@use "./variabiles" as *;
+
+.container{
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.flex-box{
+  display: flex;
+}
