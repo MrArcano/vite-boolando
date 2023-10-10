@@ -55,39 +55,45 @@ export default {
     background-color: #1a1a1a;
     color: white;
     height: 100px;
+
+    .container{
+      justify-content: space-between;
+      align-items: center;
+  
+      height: 100%;
+      .col-left{
+        ul{
+          padding-top: 16px;
+          list-style: none;
+          
+          li{
+            padding-right: 16px;
+            font-size: 14px;
+          }
+        }
+
+        a{
+          color: white;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+
+      }
+      .col-right{
+        a{
+         color: white;
+         font-size: 20px;
+         padding-top: 8px;
+         padding-right: 8px;
+       }
+      }
+    }
   }
 
-  footer .container{
-    justify-content: space-between;
-    align-items: center;
 
-    height: 100%;
-  }
 
-  .col-left ul{
-    padding-top: 16px;
-    list-style: none;
-  }
-
-  .col-left ul li{
-    padding-right: 16px;
-    font-size: 14px;
-  }
-
-  .col-left a{
-    color: white;
-    text-decoration: none;
-  }
-
-  .col-left a:hover{
-    text-decoration: underline;
-  }
-
-  .col-right a{
-    color: white;
-    font-size: 20px;
-    padding-top: 8px;
-    padding-right: 8px;
-  }
   /* ---------------------------------------------------------- */
 </style>
