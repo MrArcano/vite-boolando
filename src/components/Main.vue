@@ -1,6 +1,10 @@
 <script>
+import CardHearth from './CardHearth.vue';
 export default {
-  name: "Main"
+  name: "Main",
+  components:{
+    CardHearth
+  }
 }
 </script>
 
@@ -17,9 +21,7 @@ export default {
               <img src="../assets/img/1.webp" alt="img1">
               <img src="../assets/img/1b.webp" alt="img1b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
             <div class="badge-box">
               <span class="badge badge-red">-50%</span>
               <span class="badge badge-green">Sostenibilità</span>
@@ -40,9 +42,7 @@ export default {
               <img src="../assets/img/2.webp" alt="img2">
               <img src="../assets/img/2b.webp" alt="img2b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
             <div class="badge-box">
               <span class="badge badge-red">-30%</span>
             </div>
@@ -62,9 +62,7 @@ export default {
               <img src="../assets/img/3.webp" alt="img3">
               <img src="../assets/img/3b.webp" alt="img3b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
             <div class="badge-box">
               <span class="badge badge-red">-30%</span>
             </div>
@@ -84,9 +82,7 @@ export default {
               <img src="../assets/img/4.webp" alt="img4">
               <img src="../assets/img/4b.webp" alt="img4b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
             <div class="badge-box">
               <span class="badge badge-red">-50%</span>
               <span class="badge badge-green">Sostenibilità</span>
@@ -107,9 +103,7 @@ export default {
               <img src="../assets/img/5.webp" alt="img5">
               <img src="../assets/img/5b.webp" alt="img5b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
           </div>
 
           <div class="card-bot">
@@ -125,9 +119,7 @@ export default {
               <img src="../assets/img/6.webp" alt="img6">
               <img src="../assets/img/6b.webp" alt="img6b">
             </div>
-            <div class="hearth">
-              <span>&hearts;</span>
-            </div>
+            <CardHearth />
             <div class="badge-box">
               <span class="badge badge-green">Sostenibilità</span>
             </div>
@@ -171,24 +163,6 @@ export default {
           }
           .card-image:hover img:last-of-type{
             display: inline-block;
-          }
-          .hearth{
-            position: absolute;
-            top: 16px;
-            right: 0;
-        
-            height: 50px;
-            width: 50px;
-        
-            line-height: 50px;
-            text-align: center;
-        
-            background-color: white;
-            font-size: 20px;
-        
-            &:hover{
-              color: red;
-            }
           }
           .badge-box{
             width: 100%;
