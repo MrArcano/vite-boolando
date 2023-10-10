@@ -151,111 +151,89 @@ export default {
   /* ---------------------------------------------------------- */
   main{
     margin-top: 70px;
+    .cards{
+      padding-top: 60px;
+      flex-wrap: wrap;
+      justify-content: center;
+      .card{
+        cursor: pointer;
+        width: calc((100% - 48px) / 3);
+        min-width: 250px;
+        margin-right: 16px;
+        .card-top{
+          max-width: 450px;
+          position: relative;
+          .card-image img:last-of-type{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+          }
+          .card-image:hover img:last-of-type{
+            display: inline-block;
+          }
+          .hearth{
+            position: absolute;
+            top: 16px;
+            right: 0;
+        
+            height: 50px;
+            width: 50px;
+        
+            line-height: 50px;
+            text-align: center;
+        
+            background-color: white;
+            font-size: 20px;
+        
+            &:hover{
+              color: red;
+            }
+          }
+          .badge-box{
+            width: 100%;
+            position: absolute;
+            bottom: 50px;
+        
+            .badge{
+              color: white;
+              padding: 4px 12px;
+              font-weight: bold;
+          
+              &.badge-red{
+                background-color: red;
+              }
+            
+              &.badge-green{
+                background-color: green;
+              }
+            }
+          }
+          
+        }/* end card top */
+
+        .card-bot{
+          padding-bottom: 50px;
+          .brand{
+            font-size: 14px;
+          }
+          .name-item{
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .new-price{
+            color: red;
+            font-weight: bold;
+            padding-right: 8px;
+          }
+        
+          .old-price{
+            text-decoration: line-through;
+          }
+        } /* end card bottom */
+
+      }/* end card */
+    }
   }
-
-  .cards{
-    padding-top: 60px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .card{
-    cursor: pointer;
-    width: calc((100% - 48px) / 3);
-    min-width: 250px;
-    margin-right: 16px;
-  }
-
-  .card-top{
-    max-width: 450px;
-    position: relative;
-  }
-  /* ---------------------------------------------------------- */
-
-  /* CARD IMAGE */
-  /* ---------------------------------------------------------- */
-
-  .card-image img:last-of-type{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-
-  .card-image:hover img:last-of-type{
-    display: inline-block;
-  }
-  /* ---------------------------------------------------------- */
-
-  /* HEARTH */
-  /* ---------------------------------------------------------- */
-  .hearth{
-    position: absolute;
-    top: 16px;
-    right: 0;
-
-    height: 50px;
-    width: 50px;
-
-    line-height: 50px;
-    text-align: center;
-
-    background-color: white;
-    font-size: 20px;
-  }
-
-  .hearth:hover{
-    color: red;
-  }
-  /* ---------------------------------------------------------- */
-
-  /* BADGE */
-  /* ---------------------------------------------------------- */
-  .badge-box{
-    width: 100%;
-    position: absolute;
-    bottom: 50px;
-  }
-
-  .badge{
-    color: white;
-    padding: 4px 12px;
-    font-weight: bold;
-  }
-
-  .badge-red{
-    background-color: red;
-  }
-
-  .badge-green{
-    background-color: green;
-  }
-  /* ---------------------------------------------------------- */
-
-  /* CARD BOT */
-  /* ---------------------------------------------------------- */
-  .card-bot{
-    padding-bottom: 50px;
-  }
-
-  .brand{
-    font-size: 14px;
-  }
-
-  .name-item{
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .new-price{
-    color: red;
-    font-weight: bold;
-    padding-right: 8px;
-  }
-
-  .old-price{
-    text-decoration: line-through;
-  }
-  /* ---------------------------------------------------------- */
 </style>
