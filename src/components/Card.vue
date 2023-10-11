@@ -1,11 +1,15 @@
 <script>
+import CardHearth from './CardHearth.vue';
 export default {
+  name: "Card",
+  components:{
+    CardHearth
+  },
   props: {
     card: Object,
   },
   methods: {
     getUrl(el){
-      console.log(this.card.src);
       const imageUrl = new URL(`../assets/img/${this.card.src + el}.webp`, import.meta.url);
       return imageUrl;
     }

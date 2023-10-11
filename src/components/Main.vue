@@ -1,11 +1,9 @@
 <script>
-import CardHearth from './CardHearth.vue';
 import Card from './Card.vue';
 import { cardsData } from "../data/cardsData"
 export default {
   name: "Main",
   components:{
-    CardHearth,
     Card
   },
   data() {
